@@ -1,0 +1,344 @@
+// Inicializa o menu a partir do html
+
+window.addEventListener('DOMContentLoaded', function() {
+
+    // Questões do Módulo 01
+    var question1 = {
+        "questions": [{
+                "question_title": `
+                <h3 class="c-heading">Questão 1</h3>
+                  <p class="c-paragraph">(UFSG, 2019) Uma indústria estatal apresentou os seguintes gastos a serem registrados no final do período:</p>
+                  <yduqs-section>
+                    <!-- Recurso Dev Image - start -->
+                    <div class="container px-0">
+                        <div class='row align-items-center justify-content-center'>
+                            <div class='col-10'>
+                                <yduqs-image src="img/09.jpg" alt="" title="Ettore de Carvalho Oriol" loading="lazy">
+                                </yduqs-image>
+                                <div class="c-legenda mt-3">
+                                    <p class="c-paragraph u-text">Tabela 5: Exercício verificando o aprendizado.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Recurso Dev Image - end -->
+                  </yduqs-section>
+                  <p class="c-paragraph">Veja a versão acessível da <a class="c-link u-text-medium" href="doc/tabelas.pdf" target="_blank"><strong>tabela</strong></a>.</p>
+                  <p class="c-paragraph">Considerando os saldos dos gastos apresentados e os conceitos relacionados à contabilidade de custos, os valores totais dos custos indiretos e despesas são, respectivamente</p>
+                `,
+                "options": [
+                    `<p class='c-paragraph'>R$ 66.800,00 e R$ 12.600,00.</p>`,
+                    `<p class='c-paragraph'>R$ 21.600,00 e R$ 14.700,00.</p>`,
+                    `<p class='c-paragraph'>R$ 67.900,00 e R$ 9.300,00.</p>`,
+                    `<p class='c-paragraph'>R$ 48.800,00 e R$ 23.700,00.</p>`,
+                    `<p class='c-paragraph'>R$ 35.600,00 e R$ 15.400,00.</p>`
+                ],
+                "correct_anwser": 3,
+                "positive_feedback": `
+                  <p class='c-paragraph'>Os custos indiretos são aqueles que não podem ser atribuídos diretamente aos itens produzidos e que têm características de não oscilarem diretamente em função da quantidade destes. As despesas são os gastos que não têm relação direta com a produção e são lançados diretamente contra o lucro do período em que ocorrem, não indo para o estoque junto com os produtos.</p>
+                  <p class='c-paragraph'>Custos indiretos</p>
+                  <p class='c-paragraph'>Depreciação de máquinas e equipamentos da fábrica R$ 4,500.00.</p>
+                  <p class='c-paragraph'>Seguro da fábrica R$ 5,100.00. </p>
+                  <p class='c-paragraph'>Salário e encargos do pessoal da fábrica R$ 36,900.00. </p>
+                  <p class='c-paragraph'>Energia elétrica da fábrica R$ 3,800.00.</p>
+                  <p class='c-paragraph'>Aluguel da fábrica R$ 14,000.00.</p>
+                  <p class='c-paragraph'>Adicional de insalubridade do pessoal da fábrica R$ 3,600.00.</p>
+                  <p class='c-paragraph'>Total R$ 67,900.00.</p>
+                  <p class='c-paragraph'>Despesas</p>
+                  <p class='c-paragraph'>Consumo de material de expediente R$ 3,200.00.</p>
+                  <p class='c-paragraph'>Juros e despesas de financiamento R$ 4,500.00.</p>
+                  <p class='c-paragraph'>Gastos anormais e involuntários R$ 1,600.00.</p>
+                  <p class='c-paragraph'>Total R$ 9,300.00.</p>
+                `,
+                "negative_feedback_topic": "<span>Diferença entre custo e despesa</span>",
+                "negative_feedback_link": "#m1q1"
+            },
+            {
+                "question_title": `
+                <h3 class="c-heading">Questão 2</h3>
+                  <p class="c-paragraph">(FAU, 2018) Assinale a alternativa que apresenta o conceito de custos segundo as Normas Brasileiras de Contabilidade:</p>
+                `,
+                "options": [
+                    `<p class='c-paragraph'>Correspondem a reduções do patrimônio que não estão associadas a qualquer recebimento compensatório ou geração de produtos ou serviços, que ocorrem de forma anormal e involuntária.</p>`,
+                    `<p class='c-paragraph'>São gastos com bens ou serviços utilizados para a produção de outros bens ou serviços.</p>`,
+                    `<p class='c-paragraph'>Correspondem ao gasto levado para o ativo em função de sua vida útil. São todos os bens e direitos adquiridos e registrados no ativo.</p>`,
+                    `<p class='c-paragraph'>Correspondem ao pagamento resultante da aquisição do bem ou serviço.</p>`,
+                    `<p class='c-paragraph'>São o dispêndio de um ativo ou a criação de um passivo para obtenção de um produto ou serviço.</p>`
+                ],
+                "correct_anwser": 2,
+                "positive_feedback": `
+                  <p class='c-paragraph'>Para a contabilidade, o custo representa apenas os gastos relacionados com o objeto principal da empresa, seu escopo principal. Nesse intento, os gastos que não estão associados diretamente a esse escopo são dados como despesas e não como custos, pois não têm relação direta com os produtos e serviços comercializados.</p>
+                `,
+                "negative_feedback_topic": "<span>Demonstração do resultado do exercício (DRE)</span>",
+                "negative_feedback_link": "#m1q2"
+            }
+        ]
+    }
+    const activity1 = document.querySelector('yduqs-questions[question_id="1"]');
+    activity1 && (activity1.settings = question1);
+
+    // Questões do Módulo 02
+    var question2 = {
+        "questions": [{
+                "question_title": `
+                <h3 class="c-heading">Questão 1</h3>
+                  <p class="c-paragraph">(FCC, 2011) No primeiro semestre de 2011, uma indústria tem os seguintes custos indiretos em seu departamento de colocação de tampas em garrafas:</p>
+                  <p class="c-paragraph">
+                    <ul>
+                        <li class="u-letter-box-tiny c-paragraph">Mão de obra indireta: R$ 11.200,00</li>
+                        <li class="u-letter-box-tiny c-paragraph">Lubrificantes: R$ 2.400,00</li>
+                        <li class="u-letter-box-tiny c-paragraph">Energia elétrica: R$ 3.325,00</li>
+                        <li class="u-letter-box-tiny c-paragraph">Depreciação: R$ 1.750,00</li>
+                        <li class="u-letter-box-tiny c-paragraph">Custos indiretos diversos: R$ 4.200,00</li>
+                    </ul>
+                  </p>
+                  <p class="c-paragraph">Nesse primeiro semestre, foram produzidas 24.500 dúzias de garrafas de 0,5 litro, 28.000 dúzias de garrafas de 1,0 litro e 17.500 dúzias de garrafas de 1,5 litro. Com base na quantidade produzida, assinale a opção que apresenta o rateio dos custos indiretos das garrafas:</p>
+                `,
+                "options": [
+                    `<p class='c-paragraph'>A garrafa de 1,0 litro totalizou custos indiretos na ordem de R$ 9.651,43.</p>`,
+                    `<p class='c-paragraph'>A garrafa de 1,5 litro totalizou custos indiretos na ordem de R$ 9.050,79.</p>`,
+                    `<p class='c-paragraph'>As garrafas de 0,5 e 1,0 litro totalizaram custos indiretos na ordem de R$17.193,75.</p>`,
+                    `<p class='c-paragraph'>As garrafas de 1,0 e 1,5 litro totalizaram custos indiretos na ordem de R$ 18.702,22.</p>`,
+                    `<p class='c-paragraph'>As garrafas de 0,5 e 1,5 litro totalizaram custos indiretos na ordem de R$ 18.922,76.</p>`
+                ],
+                "correct_anwser": 3,
+                "positive_feedback": `
+                  <p class='c-paragraph'>A atividade está tentando identificar os CIF da produção total de cada tipo de garrafa. A forma de alocar os custos deve seguir a lógica apresentada na introdução do exercício.</p>
+                `,
+                "negative_feedback_topic": "<span>Alocação de custos aos produtos</span>",
+                "negative_feedback_link": "#m2q1"
+            },
+            {
+                "question_title": `
+                <h3 class="c-heading">Questão 2</h3>
+                  <p class="c-paragraph">(GSA Concursos, 2012) “Sistema que apura o valor dos custos dos bens ou serviços, tomando-se como base todos os custos da produção, incluindo custos diretos, indiretos, fixos e variáveis.”</p>
+                  <p class="c-paragraph">O enunciado se refere ao</p>
+                `,
+                "options": [
+                    `<p class='c-paragraph'>custo-padrão.</p>`,
+                    `<p class='c-paragraph'>custeio por absorção.</p>`,
+                    `<p class='c-paragraph'>custeio por meta.</p>`,
+                    `<p class='c-paragraph'>Custo direto ou variável.</p>`,
+                    `<p class='c-paragraph'>custo padrão e ajustes ao final do período.</p>`
+                ],
+                "correct_anwser": 2,
+                "positive_feedback": `
+                  <p class='c-paragraph'>O sistema de custeio por absorção utiliza os custos diretos e indiretos para estimar os custos unitários de cada produto. Desse modo, garante-se que todos os custos incorridos sejam alocados aos produtos e que apenas os custos dos produtos vendidos sejam confrontados com o lucro do período em que esse ocorreu.</p>
+                `,
+                "negative_feedback_topic": "<span>Sistema de distribuição dos custos por absorção</span>",
+                "negative_feedback_link": "#m2q2"
+            }
+        ]
+    }
+
+    const activity2 = document.querySelector('yduqs-questions[question_id="2"]');
+    activity2 && (activity2.settings = question2);
+
+    // Questões do Módulo 03
+    var question3 = {
+        "questions": [{
+                "question_title": `
+                <h3 class="c-heading">Questão 1</h3>
+                  <p class="c-paragraph">(FUNDATEC, 2016) Para atender às exigências legais, a empresa precisa adequar seus métodos de apuração de custos aos princípios contábeis e estar em conformidade com as normas e as legislações vigentes. Para a tomada de decisão, podem ser empregados métodos de custeio capazes de fornecer informações que atendam às necessidades gerenciais da empresa. Assinale a alternativa correta quanto à definição do método de custeio apresentado.</p>
+                `,
+                "options": [
+                    `<p class='c-paragraph'>Custeio por absorção – Caracteriza-se por apropriar, aos custos de produção do período, unicamente os custos variáveis.</p>`,
+                    `<p class='c-paragraph'>Custeio variável – Caracteriza-se por apropriar os custos totais de produção de um período de maneira direta ou indireta, independentemente de tais custos terem comportamento fixo ou variável em relação ao volume fabricado.</p>`,
+                    `<p class='c-paragraph'>Custeio ABC – Caracteriza-se por avaliar as atividades desenvolvidas em uma empresa, utilizando direcionadores para alocar as despesas e os custos diretos de uma forma mais realista aos produtos e serviços.</p>`,
+                    `<p class='c-paragraph'>Custeio por absorção – É estruturado para atender às necessidades da administração da empresa, permitindo sua utilização como ferramenta no processo decisório ao fornecer a margem de contribuição de cada produto.</p>`,
+                    `<p class='c-paragraph'>Custeio variável – É estruturado para atender às disposições legais quanto à apuração de resultados e à avaliação patrimonial da empresa.</p>`
+                ],
+                "correct_anwser": 3,
+                "positive_feedback": `
+                  <p class='c-paragraph'>O custeio por atividades ABC se caracteriza exatamente por procurar alocar os custos indiretos às atividades e alocar as atividades aos produtos. Cada produto consome uma quantidade de atividades para existir e, assim, está consumindo os custos auferidos. Com essa forma de alocar os custos, os valores de cada produto serão formados pelos custos de cada atividade empregada para a sua confecção, refletindo os verdadeiros custos de sua produção com maior precisão.</p>
+                `,
+                "negative_feedback_topic": "<span>Custeio baseado em atividades (ABC)</span>",
+                "negative_feedback_link": "#m3q1"
+            },
+            {
+                "question_title": `
+                <h3 class="c-heading">Questão 2</h3>
+                <p class="c-paragraph">(UFU-MG, 2019) Uma indústria Alfa produz um único produto e adota o custeio variável como método de custeamento. Essa indústria apresentou sua demonstração de resultados em 31/08/2018 para fins gerenciais, referente ao mês de agosto, abrangendo a produção e venda de 600 unidades. Vamos analisar!</p>
+                <yduqs-section>
+                  <!-- Recurso Dev Image - start -->
+                  <div class="container px-0">
+                      <div class='row align-items-center justify-content-center'>
+                          <div class='col-10'>
+                              <yduqs-image src="img/20.jpg" alt="" title="Ettore de Carvalho Oriol" loading="lazy">
+                              </yduqs-image>
+                              <div class="c-legenda mt-3">
+                                  <p class="c-paragraph u-text">Tabela 16: Verificando o aprendizado.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Recurso Dev Image - end -->
+                </yduqs-section>
+                <p class="c-paragraph">Para o mês de setembro de 2018, a indústria estima produzir e vender 400 unidades desse mesmo produto, nas mesmas condições e com a mesma estrutura disponível em agosto de 2018.</p>
+                <p class="c-paragraph">Considerando-se as informações apresentadas, a margem de contribuição total da indústria, prevista para setembro de 2018, é de</p>
+              `,
+                "options": [
+                    `<p class='c-paragraph'>R$ 8.120,00.</p>`,
+                    `<p class='c-paragraph'>R$ 4.080,00.</p>`,
+                    `<p class='c-paragraph'>R$ 12.080,00.</p>`,
+                    `<p class='c-paragraph'>R$ 3.360,00.</p>`,
+                    `<p class='c-paragraph'>R$ 16.000,00.</p>`
+                ],
+                "correct_anwser": 3,
+                "positive_feedback": `
+                <p class='c-paragraph'>Como estamos tratando do método de custeio variável, o valor da margem de contribuição unitária será constate, já que o custo variável é constate e os impostos que incidem sobre as vendas são porcentagem do valor vendido, oscilando de forma proporcional às quantidades vendidas. Com isso, para a resolução do exercício, basta achar a margem de contribuição unitária para o mês de agosto, que é calculada dividindo a MC total pela quantidade vendida. Desse modo, encontra-se o valor de R$ 30,20 por unidade. Após encontrar a MC unitária (R$ 30,20), basta multiplicar esse valor pela quantidade vendida no mês de setembro para encontrar a resposta do exercício (R$ 12.080,00).</p>
+                `,
+                "negative_feedback_topic": "<span>Definições do sistema de custeio variável</span>",
+                "negative_feedback_link": "#m3q2"
+            }
+        ]
+    }
+
+    const activity3 = document.querySelector('yduqs-questions[question_id="3"]');
+    activity3 && (activity3.settings = question3);
+
+    // Mão na massa 01
+    var exercises1 = {
+        "questions": [{
+            "question_title": `
+                    <h3 class="c-heading">Questão 1</h3>
+                  <p class="c-paragraph">No case apresentado, a Dell adotou o JIT permeando toda a sua cadeia de suprimentos. Certamente, isso exigiu uma mudança cultural na empresa, além de aprender a lidar com um sistema complexo. Diante disso, quais são os cuidados que precisam ser tomados ao implementar o sistema JIT?</p>
+                `,
+            "options": [
+                `<p class='c-paragraph'>Avaliar o tamanho dos depósitos e das equipes operacionais.</p>`,
+                `<p class='c-paragraph'>Não há necessidade de avaliar se o negócio comporta o JIT, pois essa ferramenta é adaptável a qualquer contexto.</p>`,
+                `<p class='c-paragraph'>Planejar e investir na implementação e no treinamento dos funcionários.</p>`,
+                `<p class='c-paragraph'>Avaliar cuidadosamente o hardware necessário para suportar a dinâmica do JIT.</p>`,
+                `<p class='c-paragraph'>Como o JIT só pode ser executado através de um software apropriado para tal tarefa, efetuar um software selection é fundamental.</p>`
+            ],
+            "correct_anwser": 3,
+            "positive_feedback": `
+                  <p class='c-paragraph'>A implantação do sistema just in time (JIT) pode trazer diversos benefícios para as empresas, como redução de custos, melhoria da eficiência operacional e aumento da qualidade dos produtos. Entretanto, é importante tomar alguns cuidados para que a implantação seja bem-sucedida.</p>
+                  <p class="c-paragraph">
+                    <ul class="color-neutral-10">
+                        <li class="u-letter-box-tiny c-paragraph"><strong>Planejamento</strong>: É importante realizar um planejamento cuidadoso antes de iniciar a implantação do JIT. Isso inclui a definição dos objetivos da implantação, a análise da situação atual da empresa e a identificação dos recursos necessários.</li>
+                        <li class="u-letter-box-tiny c-paragraph"><strong>Treinamento</strong>: A preparação dos funcionários é essencial para o sucesso da implantação do JIT. Os funcionários precisam entender os princípios do JIT e como eles se aplicam ao trabalho deles.</li>
+                        <li class="u-letter-box-tiny c-paragraph"><strong>Cultura organizacional</strong>: O JIT requer uma mudança cultural na empresa. Os funcionários precisam estar comprometidos com os princípios do JIT e dispostos a trabalhar de forma colaborativa.</li>
+                        <li class="u-letter-box-tiny c-paragraph"><strong>Fornecedores</strong>: Também é fundamental o alinhamento dos fornecedores com os princípios do JIT. Eles precisam ser capazes de fornecer os produtos e serviços necessários no momento certo e na quantidade certa.</li>
+                    </ul>
+                  </p>
+                `
+        },
+        {
+            "question_title": `
+                    <h3 class="c-heading">Questão 2</h3>
+                  <p class="c-paragraph">Tendo em vista o case da Dell e os benefícios do sistema just in time (JIT) na gestão de estoques e produção, imagine que você é o gerente de operações de uma empresa de médio porte que enfrenta desafios similares com estoques elevados e ineficiências na cadeia de suprimentos. Para implantar o sistema JIT, você precisa fazer um levantamento dos custos e benefícios da implementação desse sistema. Considere abaixo afirmações sobre um sistema JIT:</p>
+                  <p class="c-paragraph">
+                    <ol type="I">
+                        <li class="u-letter-box-tiny c-paragraph">Redução dos custos de armazenamento e de obsolescência.</li>
+                        <li class="u-letter-box-tiny c-paragraph">Melhora da qualidade: a produção sem estoque exige maior precisão e eficiência, o que pode reduzir defeitos e retrabalhos.</li>
+                        <li class="u-letter-box-tiny c-paragraph">Aumento da produtividade: a redução do estoque pode liberar espaço e recursos para outras atividades, aumentando a produtividade.</li>
+                        <li class="u-letter-box-tiny c-paragraph">Redução de desperdício: o uso apenas dos recursos necessários para produzir ajuda a reduzir o desperdício de matérias-primas, energia e mão de obra.</li>
+                        <li class="u-letter-box-tiny c-paragraph">Aumento de assertividade da projeção de demanda: a adoção de sistemas com algoritmos de alto poder de análises estatísticas, essência do JIT, ajuda na previsão da demanda.</li>
+                    </ol>
+                  </p>
+                  <p class="c-paragraph">Quais das alternativas abaixo cita apenas benefícios do sistema JIT?</p>
+                `,
+            "options": [
+                `<p class='c-paragraph'>I e V.</p>`,
+                `<p class='c-paragraph'>II e V.</p>`,
+                `<p class='c-paragraph'>I, II e V.</p>`,
+                `<p class='c-paragraph'>I, II, III e IV.</p>`,
+                `<p class='c-paragraph'>I, II, III, IV e V.</p>`
+            ],
+            "correct_anwser": 4,
+            "positive_feedback": `
+                  <p class='c-paragraph'>Essas afirmativas constituem os principais benefícios do sistema JIT. A afirmação V está errada, pois o JIT não atua na previsibilidade de vendas ou demanda.  Aliás, essa informação é de suma importância para que a cadeia não entre em colapso. A ideia é trabalhar com estoques ajustados e próximos a patamares mínimos sem que haja interrupção da produção. Caso exista aumento ou redução de demanda inesperados, a cadeia produtiva terá muita dificuldade para evitar rupturas ou administrar excesso de estoque nas estruturas dos participantes desse ecossistema.</p>
+                `
+        }
+        ]
+    }
+
+    const exercise1 = document.querySelector('yduqs-questions[exercise_id="1"]');
+    exercise1 && (exercise1.settings = exercises1);
+
+    // Mão na massa 02
+    var exercises2 = {
+        "questions": [{
+            "question_title": `
+                    <h3 class="c-heading">Questão 1</h3>
+                  <p class="c-paragraph">No case, o gestor do CD, verificou a pressão dos custos indiretos com a redução de movimentação e armazenagem, mas também atuou em linhas variáveis, como o caso de reutilização de caixas e venda do excedente (caixas não reutilizadas e avariadas). Os custos com insumos têm perfil de</p>
+                `,
+            "options": [
+                `<p class='c-paragraph'>custos indiretos.</p>`,
+                `<p class='c-paragraph'>custos semifixos.</p>`,
+                `<p class='c-paragraph'>custos diretos e indiretos.</p>`,
+                `<p class='c-paragraph'>custos diretos.</p>`,
+                `<p class='c-paragraph'>custos gerenciais.</p>`
+            ],
+            "correct_anwser": 4,
+            "positive_feedback": `
+                  <p class='c-paragraph'>Tipicamente, os custos com insumos podem ser relacionados diretamente com os produtos a serem vendidos ou serviços fornecidos, conceito de um custo direto.</p>
+                `
+        },
+        {
+            "question_title": `
+                    <h3 class="c-heading">Questão 2</h3>
+                  <p class="c-paragraph">O caso apresenta uma situação em que o gestor necessitava reduzir custos indiretos, mas os gestores também estão interessados em reduzir custos diretos. Dentro da categorização dos custos, há também os chamados variáveis. Assinale a alternativa que contém um exemplo de custo variável.</p>
+                `,
+            "options": [
+                `<p class='c-paragraph'>Amortização de ativos.</p>`,
+                `<p class='c-paragraph'>Matéria-prima.</p>`,
+                `<p class='c-paragraph'>Impostos e taxas.</p>`,
+                `<p class='c-paragraph'>Aluguel.</p>`,
+                `<p class='c-paragraph'>Salários dos funcionários administrativos.</p>`
+            ],
+            "correct_anwser": 2,
+            "positive_feedback": `
+                  <p class='c-paragraph'>A quantidade de matéria-prima utilizada para produzir um produto ou serviço varia diretamente de acordo com a quantidade feita. As demais alternativas são despesas ou custos que não dependem somente da quantidade produzida.</p>
+                `
+        }
+        ]
+    }
+
+    const exercise2 = document.querySelector('yduqs-questions[exercise_id="2"]');
+    exercise2 && (exercise2.settings = exercises2);
+
+    // Mão na massa 03
+    var exercises3 = {
+        "questions": [{
+            "question_title": `
+                    <h3 class="c-heading">Questão 1</h3>
+                  <p class="c-paragraph">No case, a Empresa EFG mostrou conhecer seus custos e trabalhou para diminuí-los de maneira a não comprometer o nível de serviço aos seus clientes. Dentro de uma operação de um CD, quais outros custos podem ser considerados fixos?</p>
+                `,
+            "options": [
+                `<p class='c-paragraph'>Mão de obra operacional.</p>`,
+                `<p class='c-paragraph'>Etiquetas para identificação de caixas.</p>`,
+                `<p class='c-paragraph'>Seguro predial.</p>`,
+                `<p class='c-paragraph'>Custos com equipamentos utilizados na operacionalização do CD.</p>`,
+                `<p class='c-paragraph'>Limpeza e manutenção.</p>`
+            ],
+            "correct_anwser": 3,
+            "positive_feedback": `
+                  <p class='c-paragraph'>O custo de seguro predial é um ótimo exemplo de custo fixo. Independentemente da movimentação ou volume de armazenagem, haverá o custo do seguro do CD. Caso esse custo seja cobrado por metro quadrado, ele também será reduzido. As demais alternativas são exemplos de custos variáveis.</p>
+                `
+        },
+        {
+            "question_title": `
+                    <h3 class="c-heading">Questão 2</h3>
+                  <p class="c-paragraph">A área comercial da empresa funciona nas dependências do centro de distribuição, utilizando o escritório e salas de reunião localizadas no mezanino construído acima das docas do recebimento. Há a necessidade de separar os custos da unidade entre as áreas de logística e comercial. Assinale a alternativa de rateio possível para a conta de água e esgoto.</p>
+                `,
+            "options": [
+                `<p class='c-paragraph'>Medir o número de copos d’água que cada área consome.</p>`,
+                `<p class='c-paragraph'>Dividir proporcional ao número de pessoas de cada área.</p>`,
+                `<p class='c-paragraph'>Dividir pelo número de visitantes que cada área recebe no período.</p>`,
+                `<p class='c-paragraph'>Dividir pelo número de cômodos que cada área ocupa.</p>`,
+                `<p class='c-paragraph'>Não há como ratear tal conta.</p>`
+            ],
+            "correct_anwser": 2,
+            "positive_feedback": `
+                  <p class='c-paragraph'>O rateio de uma conta de água e esgoto em um centro de distribuição pode ser feito de várias maneiras. A maneira mais comum é dividir o valor da conta pelo número de pessoas de cada área que utilizam o centro de distribuição.</p>
+                `
+        }
+        ]
+    }
+
+    const exercise3 = document.querySelector('yduqs-questions[exercise_id="3"]');
+    exercise3 && (exercise3.settings = exercises3);
+
+});
